@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Home from './page/Home';
 import Layout from './layout/Layout';
+import About from './page/About';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          {/* Add more nested routes here later */}
+          <Route path='/about' element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

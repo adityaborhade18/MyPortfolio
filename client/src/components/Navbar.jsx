@@ -1,36 +1,33 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';  
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      if (window.scrollY > 20) setScrolled(true);
+      else setScrolled(false);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navbar items
+ 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', to: '/' },
+    { name: 'About', to: '/about' },
+    { name: 'Projects', to: '/projects' },
+    { name: 'Skills', to: '/skills' },
+    { name: 'Contact', to: '/contact' },
   ];
 
   return (
-    <nav 
-      className={`fixed top-0  w-full z-50 transition-all duration-300 ${
+    <nav
+      className={`fixed top-0 w-full  z-50 transition-all duration-300 ${
         scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
       }`}
     >
@@ -38,32 +35,29 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a 
-              href="#home" 
-              className="text-2xl font-bold text-indigo-600"
-            >
+            <Link to="/home" className="text-2xl font-bold text-indigo-600">
               Portfolio
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.to}
                   className="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-300"
               >
                 Hire Me
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -73,11 +67,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-indigo-600 focus:outline-none"
             >
-              {isOpen ? (
-                <FiX className="h-6 w-6" />
-              ) : (
-                <FiMenu className="h-6 w-6" />
-              )}
+              {isOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -88,22 +78,22 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.to}
                 className="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 font-medium rounded-md"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="block w-full text-center bg-indigo-600 text-white px-3 py-2 rounded-md hover:bg-indigo-700 font-medium"
               onClick={() => setIsOpen(false)}
             >
               Hire Me
-            </a>
+            </Link>
           </div>
         </div>
       )}
