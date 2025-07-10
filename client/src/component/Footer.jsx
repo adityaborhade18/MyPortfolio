@@ -1,0 +1,55 @@
+import React from 'react';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white px-6 py-8 mt-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+        {/* Branding */}
+        <div>
+          <h1 className="text-2xl font-bold mb-2">Aditya Borhade</h1>
+          <p className="text-sm text-gray-400">
+            Full-Stack Developer | Building the web, one project at a time.
+          </p>
+        </div>
+
+        {/* Navigation */}
+        <div>
+          <h2 className="text-lg font-semibold mb-3">Quick Links</h2>
+          <ul className="space-y-1 text-gray-300">
+            <li><a href="#about" className="hover:text-white">About</a></li>
+            <li><a href="#projects" className="hover:text-white">Projects</a></li>
+            <li><a href="#contact" className="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Social Media */}
+        <div>
+          <h2 className="text-lg font-semibold mb-3">Follow Me</h2>
+          <div className="flex justify-center md:justify-start gap-4">
+            <a href="https://github.com/Aditya-Borhade" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
+              <FaGithub />
+            </a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
+              <FaLinkedin />
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
+              <FaTwitter />
+            </a>
+            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
+              <FaInstagram />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Aditya Borhade. All rights reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
+
