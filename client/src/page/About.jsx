@@ -5,8 +5,8 @@ const About= () => {
   // Skills data
   const skills = [
     'JavaScript', 'React', 'Node.js', 
-    'Tailwind CSS', 'UI/UX Design', 'Responsive Development',
-    'API Integration', 'Performance Optimization'
+    'Tailwind CSS', 'MongoDB', 'Responsive Development',
+    'API Integration', 'SQL'
   ];
 
   useEffect(() => {
@@ -72,12 +72,12 @@ const About= () => {
             transition={{ delay: 0.8 }}
           >
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Your Name</span>
+              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Aditya</span>
             </h2>
             
             <div className="space-y-4 text-gray-600 dark:text-gray-300">
               <p>
-                I'm a passionate frontend developer with 5+ years of experience creating 
+                I'm a passionate full stack developer with 1+ years of experience creating 
                 engaging digital experiences. My mission is to transform complex problems 
                 into intuitive, beautiful solutions.
               </p>
