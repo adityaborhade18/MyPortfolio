@@ -22,7 +22,7 @@ const Home = () => {
   ];
 
   return (
-    <div className={`min-h-screen flex mt-16 items-center justify-center px-4 sm:px-6 transition-colors duration-500 ${
+    <div className={`min-h-screen flex  items-center justify-center px-4 sm:px-6 transition-colors duration-500 ${
       darkMode 
         ? 'bg-gradient-to-br from-gray-900 to-indigo-900/30 text-white' 
         : 'bg-gradient-to-br from-gray-50 to-blue-50 text-gray-900'
@@ -64,7 +64,7 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={isMounted ? { opacity: 1 } : {}}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className={`text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-6 ${
+            className={`text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-2 mt-18 ${
               darkMode 
                 ? 'bg-indigo-500/20 text-indigo-300' 
                 : 'bg-indigo-100 text-indigo-600'
