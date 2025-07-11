@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowDown } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -22,15 +22,15 @@ const Home = () => {
   ];
 
   return (
-    <div className={`min-h-screen flex  items-center justify-center px-4 sm:px-6 transition-colors duration-500 ${
+    <div className={`min-h-screen flex items-center justify-center px-4 sm:px-6 transition-colors duration-500 ${
       darkMode 
         ? 'bg-gradient-to-br from-gray-900 to-indigo-900/30 text-white' 
         : 'bg-gradient-to-br from-gray-50 to-blue-50 text-gray-900'
     }`}>
-      {/* Floating particles background */}
+      {/* Static particles background */}
       <div className="fixed inset-0 overflow-hidden z-0">
         {[...Array(15)].map((_, i) => (
-          <motion.div
+          <div
             key={i}
             className={`absolute rounded-full ${darkMode ? 'bg-indigo-500/10' : 'bg-blue-400/20'}`}
             style={{
@@ -38,15 +38,6 @@ const Home = () => {
               left: `${Math.random() * 100}%`,
               width: `${Math.random() * 100 + 20}px`,
               height: `${Math.random() * 100 + 20}px`,
-            }}
-            animate={{
-              y: [0, Math.random() * 100 - 50, 0],
-              x: [0, Math.random() * 100 - 50, 0],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              ease: "easeInOut",
             }}
           />
         ))}
@@ -102,30 +93,7 @@ const Home = () => {
             animate={isMounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            <motion.a
-              href="#projects"
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                darkMode 
-                  ? 'bg-gradient-to-r from-blue-500 to-indigo-600 hover:shadow-lg hover:shadow-blue-500/30' 
-                  : 'bg-gradient-to-r from-blue-400 to-indigo-500 hover:shadow-lg hover:shadow-blue-400/30'
-              } text-white`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View Projects
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className={`px-6 py-3 rounded-lg font-medium border transition-all ${
-                darkMode 
-                  ? 'border-indigo-500 hover:bg-indigo-500/20' 
-                  : 'border-indigo-500 text-indigo-600 hover:bg-indigo-100'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Me
-            </motion.a>
+            
           </motion.div>
           
           <motion.div
@@ -172,31 +140,16 @@ const Home = () => {
               </div>
             </div>
             
-            <motion.div 
+            <div 
               className={`absolute -top-6 -right-6 w-32 h-32 rounded-full ${
                 darkMode ? 'bg-indigo-500/20' : 'bg-indigo-400/20'
               } backdrop-blur-lg`}
-              animate={{ 
-                scale: [1, 1.1, 1],
-              }}
-              transition={{ 
-                duration: 4,
-                repeat: Infinity,
-              }}
             />
             
-            <motion.div 
+            <div 
               className={`absolute -bottom-8 -left-8 w-40 h-40 rounded-full ${
                 darkMode ? 'bg-blue-500/20' : 'bg-blue-400/20'
               } backdrop-blur-lg`}
-              animate={{ 
-                scale: [1, 1.05, 1],
-              }}
-              transition={{ 
-                duration: 5,
-                repeat: Infinity,
-                delay: 0.5
-              }}
             />
             
             <div className="absolute -bottom-6 -right-6 z-20">
@@ -223,26 +176,6 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
-      
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isMounted ? { opacity: 1, y: 0 } : {}}
-        transition={{ delay: 1.5, duration: 0.8 }}
-      >
-        <div className={`mb-2 ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
-          Scroll to explore
-        </div>
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-        >
-          <FiArrowDown className={`mx-auto text-xl ${
-            darkMode ? 'text-indigo-400' : 'text-indigo-500'
-          }`} />
-        </motion.div>
-      </motion.div>
       
       {/* Dark mode toggle */}
       <motion.button

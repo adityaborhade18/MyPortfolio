@@ -675,6 +675,7 @@ const About = () => {
                           borderColor: '#6366f1',
                           transition: { duration: 0.3 }
                         }}
+                      
                       >
                         <div className="text-2xl mr-3 flex-shrink-0">
                           {skill.icon}
@@ -728,6 +729,7 @@ const About = () => {
               y: -5,
               transition: { duration: 0.3 }
             }}
+            
           >
             <div className="max-w-4xl mx-auto">
               <motion.h2 
@@ -777,6 +779,7 @@ const About = () => {
                       borderColor: '#6366f1',
                       transition: { duration: 0.3 }
                     }}
+                   
                   >
                     <motion.div 
                       className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-0`}
@@ -793,6 +796,9 @@ const About = () => {
               </div>
             </div>
           </motion.div>
+
+          
+
         </div>
       </div>
 

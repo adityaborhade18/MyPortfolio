@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: 'About', to: '/about' },
     { name: 'Projects', to: '/projects' },
     { name: 'Skills', to: '/skills' },
-    { name: 'Contact', to: '/contact' },
+    { name: 'Contact', to: '/Contact' },
   ];
 
   const socialIcons = [
@@ -53,7 +53,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.to}
+                  to={item.to}
                   className={`relative px-2 py-1 font-medium transition-all duration-300 ${
                     location.pathname === item.to
                       ? 'text-indigo-400'

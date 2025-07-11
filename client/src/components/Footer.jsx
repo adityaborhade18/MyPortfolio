@@ -28,13 +28,13 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold mb-3">Follow Me</h2>
           <div className="flex justify-center md:justify-start gap-4">
-            <a href="https://github.com/Aditya-Borhade" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
+            <a href="https://github.com/adityaborhade18" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
+            <a href="https://www.linkedin.com/in/aditya-borhade-9489712a4/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
               <FaLinkedin />
             </a>
-            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
+            <a href="https://x.com/1828Aditya" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
               <FaTwitter />
             </a>
             <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">

@@ -73,47 +73,36 @@ const Skills = () => {
     },
   };
 
-//   const itemVariants = {
-//     hidden: { y: 30, opacity: 0 },
-//     visible: {
-//       y: 0,
-//       opacity: 1,
-//       transition: { 
-//         duration: 0.5, 
-//         ease: 'backOut' 
-//       },
-//     },
-//   };
-
-//   const cardHover = {
-//     hover: { 
-//       y: -10,
-//       scale: 1.03,
-//       boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-//       transition: { duration: 0.3 }
-//     }
-//   };
-
-    const combinedVariants = {
-  hidden: { y: 30, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { 
-      duration: 0.5, 
-      ease: 'backOut',
+  const skillCardVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { 
+        duration: 0.5, 
+        ease: 'backOut',
+      },
     },
-  },
-  hover: { 
-    y: -10,
-    scale: 1.03,
-    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-    transition: { duration: 0.3 },
-  },
-};
+    hover: { 
+      y: -10,
+      scale: 1.05,
+      backgroundColor: 'rgba(59, 130, 246, 0.3)',
+      borderColor: '#3b82f6',
+      boxShadow: '0 15px 30px -10px rgba(59, 130, 246, 0.5)',
+      transition: { duration: 0.3 },
+    },
+  };
 
-
-
+  const dsaCardVariants = {
+    hover: { 
+      scale: 1.08,
+      backgroundColor: 'rgba(6, 182, 212, 0.3)',
+      color: '#ffffff',
+      borderColor: '#06b6d4',
+      boxShadow: '0 0 20px rgba(6, 182, 212, 0.7)',
+      zIndex: 10,
+    }
+  };
 
   return (
     <section 
@@ -122,10 +111,94 @@ const Skills = () => {
     >
       {/* DeepSeek-inspired background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black z-0"></div>
+      
+      {/* Floating bubbles background - Increased to 30 bubbles */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {[...Array(30)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-blue-500/10"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${Math.random() * 40 + 10}px`,
+              height: `${Math.random() * 40 + 10}px`,
+            }}
+            animate={{
+              y: [0, -20, 0, -30, 0],
+              x: [0, 20, 0, -20, 0],
+            }}
+            transition={{
+              duration: Math.random() * 20 + 20,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
+      
+      {/* Animated gradient circles */}
       <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-cyan-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse"></div>
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-soft-light filter blur-3xl"
+          animate={{ 
+            opacity: [0.2, 0.4, 0.2],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{ 
+            duration: 6,
+            repeat: Infinity,
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-cyan-500 rounded-full mix-blend-soft-light filter blur-3xl"
+          animate={{ 
+            opacity: [0.2, 0.35, 0.2],
+            scale: [1, 1.08, 1],
+          }}
+          transition={{ 
+            duration: 7,
+            repeat: Infinity,
+            delay: 1
+          }}
+        />
+        <motion.div 
+          className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-500 rounded-full mix-blend-soft-light filter blur-3xl"
+          animate={{ 
+            opacity: [0.2, 0.3, 0.2],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            delay: 2
+          }}
+        />
+        {/* Additional bubbles */}
+        <motion.div 
+          className="absolute top-1/2 left-1/3 w-56 h-56 bg-indigo-500 rounded-full mix-blend-soft-light filter blur-3xl"
+          animate={{ 
+            opacity: [0.2, 0.25, 0.2],
+            scale: [1, 1.07, 1],
+          }}
+          transition={{ 
+            duration: 9,
+            repeat: Infinity,
+            delay: 0.5
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 left-1/2 w-40 h-40 bg-green-500 rounded-full mix-blend-soft-light filter blur-3xl"
+          animate={{ 
+            opacity: [0.2, 0.3, 0.2],
+            scale: [1, 1.06, 1],
+          }}
+          transition={{ 
+            duration: 10,
+            repeat: Infinity,
+            delay: 1.5
+          }}
+        />
       </div>
       
       {/* Grid pattern overlay */}
@@ -175,9 +248,8 @@ const Skills = () => {
               {frontendSkills.map((skill, index) => (
                 <motion.div
                   key={index}
-                  variants={combinedVariants}
+                  variants={skillCardVariants}
                   whileHover="hover"
-                  
                   className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600"
                 >
                   <div className="text-3xl mb-2">
@@ -207,9 +279,8 @@ const Skills = () => {
               {backendSkills.map((skill, index) => (
                 <motion.div
                   key={index}
-                  variants={combinedVariants}
+                  variants={skillCardVariants}
                   whileHover="hover"
-                 
                   className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600"
                 >
                   <div className="text-3xl mb-2">
@@ -239,9 +310,8 @@ const Skills = () => {
               {databaseSkills.map((skill, index) => (
                 <motion.div
                   key={index}
-                  variants={combinedVariants}
+                  variants={skillCardVariants}
                   whileHover="hover"
-                  
                   className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600"
                 >
                   <div className="text-3xl mb-2">
@@ -261,8 +331,29 @@ const Skills = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full -m-16 filter blur-xl"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-500/20 rounded-full -m-24 filter blur-xl"></div>
+          <motion.div 
+            className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full -m-16 filter blur-xl"
+            animate={{ 
+              scale: [1, 1.2, 1],
+              opacity: [0.2, 0.4, 0.2],
+            }}
+            transition={{ 
+              duration: 6,
+              repeat: Infinity,
+            }}
+          />
+          <motion.div 
+            className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-500/20 rounded-full -m-24 filter blur-xl"
+            animate={{ 
+              scale: [1, 1.15, 1],
+              opacity: [0.2, 0.35, 0.2],
+            }}
+            transition={{ 
+              duration: 7,
+              repeat: Infinity,
+              delay: 1
+            }}
+          />
           
           <div className="relative z-10">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
@@ -291,14 +382,8 @@ const Skills = () => {
               {dsaTopics.map((topic, i) => (
                 <motion.div
                   key={i}
-                  className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-lg text-center text-sm font-medium border border-gray-700 shadow-sm"
-                  whileHover={{ 
-                    scale: 1.05,
-                    backgroundColor: 'rgba(6, 182, 212, 0.15)',
-                    color: '#06b6d4',
-                    borderColor: '#06b6d4',
-                    boxShadow: '0 0 15px rgba(6, 182, 212, 0.3)'
-                  }}
+                  className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-lg text-center text-sm font-medium border border-gray-700 shadow-sm text-gray-300"
+                  whileHover={dsaCardVariants.hover}
                   whileTap={{ scale: 0.95 }}
                 >
                   {topic}

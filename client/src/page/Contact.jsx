@@ -323,7 +323,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div 
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -333,8 +333,8 @@ const Contact = () => {
               <FaEnvelope className="text-white text-xl" />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-            <p className="text-gray-300">contact@example.com</p>
-            <p className="text-gray-300">support@example.com</p>
+            <a className="text-gray-300">adityaborhade793@gmail.com</a>
+           
           </div>
           
           <div className="bg-gray-800/60 backdrop-blur-lg rounded-xl p-6 border border-gray-700">
@@ -343,7 +343,6 @@ const Contact = () => {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
             <p className="text-gray-300">+1 (123) 456-7890</p>
-            <p className="text-gray-300">+1 (987) 654-3210</p>
           </div>
           
           <div className="bg-gray-800/60 backdrop-blur-lg rounded-xl p-6 border border-gray-700">
@@ -356,7 +355,7 @@ const Contact = () => {
                 <span className="text-gray-300 font-bold">In</span>
               </div>
               <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
-                <span className="text-gray-300 font-bold">f</span>
+                <span className="text-gray-300 font-bold">G</span>
               </div>
               <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center cursor-pointer hover:bg-purple-600 transition-colors">
                 <span className="text-gray-300 font-bold">Ig</span>
