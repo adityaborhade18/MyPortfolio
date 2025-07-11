@@ -199,7 +199,7 @@ const Contact = () => {
               animate="visible"
             >
               <motion.div className="mb-6" variants={itemVariants}>
-                <label htmlFor="name" className="block text-gray-300 mb-2 flex items-center">
+                <label htmlFor="name" className="block text-gray-300 mb-2  items-center">
                   <FaUser className="mr-2 text-cyan-400" /> Full Name
                 </label>
                 <div className="relative">
@@ -224,7 +224,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div className="mb-6" variants={itemVariants}>
-                <label htmlFor="email" className="block text-gray-300 mb-2 flex items-center">
+                <label htmlFor="email" className="block text-gray-300 mb-2  items-center">
                   <FaEnvelope className="mr-2 text-cyan-400" /> Email Address
                 </label>
                 <div className="relative">
@@ -249,7 +249,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div className="mb-6" variants={itemVariants}>
-                <label htmlFor="phone" className="block text-gray-300 mb-2 flex items-center">
+                <label htmlFor="phone" className="block text-gray-300 mb-2  items-center">
                   <FaPhone className="mr-2 text-cyan-400" /> Phone Number
                 </label>
                 <div className="relative">

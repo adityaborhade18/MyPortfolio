@@ -24,9 +24,9 @@ const Navbar = () => {
   ];
 
   const socialIcons = [
-    { icon: <FiGithub />, url: 'https://github.com' },
-    { icon: <FiLinkedin />, url: 'https://linkedin.com' },
-    { icon: <FiTwitter />, url: 'https://twitter.com' },
+    { icon: <FiGithub />, url: 'https://github.com/adityaborhade18' },
+    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/aditya-borhade-9489712a4' },
+    { icon: <FiTwitter />, url: 'https://x.com/1828Aditya' },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.to}
+                  href={item.to}
                   className={`relative px-2 py-1 font-medium transition-all duration-300 ${
                     location.pathname === item.to
                       ? 'text-indigo-400'

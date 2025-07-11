@@ -9,7 +9,7 @@ import Contact from './page/Contact';
 
 function App() {
   return (
-    <BrowserRouter>
+    
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
@@ -19,7 +19,7 @@ function App() {
           <Route path='/Contact' element={<Contact />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+   
   );
 }
 
