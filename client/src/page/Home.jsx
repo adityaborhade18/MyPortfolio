@@ -247,7 +247,7 @@ const Home = () => {
       {/* Dark mode toggle */}
       <motion.button
         onClick={toggleDarkMode}
-        className={`fixed top-48 right-14 p-3 rounded-full z-50 ${
+        className={`fixed top-30 right-14 p-3 rounded-full z-50 ${
           darkMode 
             ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' 
             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
