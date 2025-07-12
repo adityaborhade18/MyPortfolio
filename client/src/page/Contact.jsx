@@ -1,5 +1,7 @@
 // src/components/Contact.jsx
 import React, { useState } from 'react';
+import axios from 'axios';
+import toast from 'react-hot-toast'
 import { motion } from 'framer-motion';
 import { FaUser, FaEnvelope, FaPhone, FaPaperPlane, FaCheck } from 'react-icons/fa';
 
@@ -14,15 +16,16 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
-    // Clear error when user types
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
-  };
+ const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData(prev => ({ ...prev, [name]: value }));
+
+  // Clear error when user types
+  if (errors[name]) {
+    setErrors(prev => ({ ...prev, [name]: '' }));
+  }
+};
+
 
   const validateForm = () => {
     const newErrors = {};
@@ -50,29 +53,55 @@ const Contact = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = validateForm();
-    
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-    
+  const { name, email, phone, message } = formData;
+
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const newErrors = validateForm();
+  if (Object.keys(newErrors).length > 0) {
+    setErrors(newErrors);
+    return;
+  }
+
+  try {
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
+
+    const { data } = await axios.post('http://localhost:4000/api/email', {
+      name,
+      email,
+      phone,
+      message,
+    });
+
+    if (data.success) {
+      toast.success("Your message has been sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+      });
+      setErrors({});
+      setIsSubmitted(true); 
+
       
-      // Reset form after success
       setTimeout(() => {
-        setFormData({ name: '', email: '', phone: '', message: '' });
         setIsSubmitted(false);
-      }, 3000);
-    }, 1500);
-  };
+      }, 2000);
+    } else {
+      toast.error(data.message || "Something went wrong!");
+    }
+  } catch (error) {
+    console.error("Submission error:", error);
+    toast.error(error.response?.data?.message || error.message || "Server error");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },

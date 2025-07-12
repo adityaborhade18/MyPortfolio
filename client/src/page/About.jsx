@@ -516,7 +516,7 @@ const About = () => {
                   Full-Stack Developer
                 </motion.p>
                 
-                <motion.div 
+                {/* <motion.div 
                   className="flex justify-center lg:justify-start space-x-4 mb-8"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -540,7 +540,7 @@ const About = () => {
                       {link.icon}
                     </motion.a>
                   ))}
-                </motion.div>
+                </motion.div> */}
                 
                 <motion.div 
                   className="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 shadow-lg max-w-md border border-gray-700"
