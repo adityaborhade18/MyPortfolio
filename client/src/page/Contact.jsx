@@ -352,21 +352,24 @@ const Contact = () => {
         </motion.div>
 
         <motion.div 
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 "
+          className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 ml-[10rem] mr-[10rem]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          <div className="bg-gray-800/60 backdrop-blur-lg rounded-xl p-6 border border-gray-700">
+          <div  className="bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-gray-700 hover:border-blue-500 hover:text-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
             <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
               <FaEnvelope className="text-white text-xl" />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-            <a className="text-gray-300">adityaborhade793@gmail.com</a>
+            <a href='mailto:adityaborhade793@gmail.com' className="text-gray-300 hover:underline">
+                adityaborhade793@gmail.com
+             </a>
+
            
           </div>
           
-          <div className="bg-gray-800/60 backdrop-blur-lg rounded-xl p-6 border border-gray-700">
+          <div  className="bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-gray-700 hover:border-blue-500 hover:text-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
             <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
               <FaPhone className="text-white text-xl" />
             </div>
@@ -374,23 +377,7 @@ const Contact = () => {
             <p className="text-gray-300">+1 (123) 456-7890</p>
           </div>
           
-          <div className="bg-gray-800/60 backdrop-blur-lg rounded-xl p-6 border border-gray-700">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
-              <FaUser className="text-white text-xl" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Follow Me</h3>
-            <div className="flex space-x-4">
-              <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center cursor-pointer hover:bg-cyan-600 transition-colors">
-                <span className="text-gray-300 font-bold">In</span>
-              </div>
-              <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
-                <span className="text-gray-300 font-bold">G</span>
-              </div>
-              <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center cursor-pointer hover:bg-purple-600 transition-colors">
-                <span className="text-gray-300 font-bold">Ig</span>
-              </div>
-            </div>
-          </div>
+         
         </motion.div>
       </div>
     </section>

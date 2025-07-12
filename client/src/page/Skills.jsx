@@ -39,7 +39,7 @@ const Skills = () => {
     { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
     { name: 'React', icon: <FaReact className="text-cyan-500" /> },
     { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
-    { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },
+    
   ];
 
   const backendSkills = [
@@ -47,20 +47,20 @@ const Skills = () => {
     { name: 'Express', icon: <SiExpress className="text-gray-800 dark:text-gray-300" /> },
     { name: 'Java', icon: <FaJava className="text-red-500" /> },
     { name: 'Git', icon: <FaGitAlt className="text-orange-600" /> },
-    { name: 'REST APIs', icon: <FaServer className="text-blue-400" /> },
+    
   ];
 
   const databaseSkills = [
     { name: 'MongoDB', icon: <SiMongodb className="text-green-600" /> },
     { name: 'MySQL', icon: <SiMysql className="text-blue-700" /> },
-    { name: 'Database Design', icon: <FaDatabase className="text-indigo-500" /> },
+    
   ];
 
   const dsaTopics = [
     'Arrays & Strings', 'Linked Lists', 'Stacks & Queues', 
-    'Trees & Graphs', 'Sorting Algorithms', 'Searching Algorithms',
-    'Dynamic Programming', 'Recursion', 'Hash Tables', 
-    'Greedy Algorithms', 'Backtracking', 'Tries'
+    'Trees', 'Sorting Algorithms', 'Searching Algorithms',
+     'Recursion', 'Hash Tables', 
+    'Greedy Algorithms', 'Tries'
   ];
 
   const containerVariants = {
@@ -235,7 +235,8 @@ const Skills = () => {
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             variants={containerVariants}
-            className="bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-gray-700"
+            className="bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-gray-700 hover:border-blue-500 hover:text-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
+
           >
             <div className="flex items-center mb-6">
               <div className="bg-gradient-to-r from-blue-400 to-cyan-500 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
@@ -244,13 +245,13 @@ const Skills = () => {
               <h3 className="text-xl font-bold text-white">Frontend Development</h3>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 ">
               {frontendSkills.map((skill, index) => (
                 <motion.div
                   key={index}
                   variants={skillCardVariants}
                   whileHover="hover"
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600"
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-105"
                 >
                   <div className="text-3xl mb-2">
                     {skill.icon}
@@ -266,7 +267,7 @@ const Skills = () => {
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             variants={containerVariants}
-            className="bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-gray-700"
+             className="bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-gray-700 hover:border-blue-500 hover:text-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
           >
             <div className="flex items-center mb-6">
               <div className="bg-gradient-to-r from-green-400 to-emerald-500 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
@@ -281,7 +282,7 @@ const Skills = () => {
                   key={index}
                   variants={skillCardVariants}
                   whileHover="hover"
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600"
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-105"
                 >
                   <div className="text-3xl mb-2">
                     {skill.icon}
@@ -297,7 +298,7 @@ const Skills = () => {
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             variants={containerVariants}
-            className="bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-gray-700"
+            className="bg-gray-800/60 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-gray-700 hover:border-blue-500 hover:text-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
           >
             <div className="flex items-center mb-6">
               <div className="bg-gradient-to-r from-purple-400 to-indigo-500 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
@@ -312,7 +313,7 @@ const Skills = () => {
                   key={index}
                   variants={skillCardVariants}
                   whileHover="hover"
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600"
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-105"
                 >
                   <div className="text-3xl mb-2">
                     {skill.icon}
@@ -382,7 +383,7 @@ const Skills = () => {
               {dsaTopics.map((topic, i) => (
                 <motion.div
                   key={i}
-                  className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-lg text-center text-sm font-medium border border-gray-700 shadow-sm text-gray-300"
+                  className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-lg text-center text-sm font-medium border border-gray-700 shadow-sm text-gray-300 hover:border-blue-500 hover:text-blue-400 hover:scale-105"
                   whileHover={dsaCardVariants.hover}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -394,7 +395,7 @@ const Skills = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-                <span className="text-sm text-gray-300">500+ problems solved</span>
+                <span className="text-sm text-gray-300">130+ problems solved</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
@@ -402,7 +403,7 @@ const Skills = () => {
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
-                <span className="text-sm text-gray-300">Specialized in graph algorithms</span>
+                <span className="text-sm text-gray-300">Specialized in Tree algorithm</span>
               </div>
             </div>
           </div>

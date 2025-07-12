@@ -10,22 +10,33 @@ const Project = () => {
       id: 1,
       title: "Airbnb Clone",
       description: "Full-stack Airbnb clone with property listings, user authentication, booking system, and admin dashboard.",
-      technologies: ["MongoDB", "Express.js", "Node.js", "Tailwind CSS", "JWT Auth", "Stripe API"],
+      technologies: ["MongoDB", "Express.js", "Node.js", "Tailwind CSS","Session-Auth"],
       category: "fullstack",
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       demoLink: "#",
-      codeLink: "#"
+      codeLink: "https://github.com/adityaborhade18/Airbnb-Booking-App"
     },
     {
       id: 2,
       title: "Grocery Store",
       description: "Full-stack e-commerce grocery platform with product catalog, cart, user profiles, and admin dashboard.",
-      technologies: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Redux"],
+      technologies: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT Auth"],
       category: "fullstack",
       image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      demoLink: "#",
-      codeLink: "#"
+      demoLink: "https://grocery-delivery-app-smoky.vercel.app/",
+      codeLink: "https://github.com/adityaborhade18/grocery-delivery-app"
     },
+    {
+      id: 3,
+      title: "TodoNest",
+      description: "A sleek and responsive To-Do List application built with React and styled using Tailwind CSS.",
+      technologies: ["React", "Tailwind CSS"],
+      category: "react",
+      image: "https://media.istockphoto.com/id/1092571024/photo/to-do-list-in-notebook-with-calendar.webp?a=1&b=1&s=612x612&w=0&k=20&c=rAN0y61peU5eAvPOCByBG1moG_4GFFPMUXbEnMei8Ok=",
+      demoLink: "https://grocery-delivery-app-smoky.vercel.app/",
+      codeLink: "https://github.com/adityaborhade18/todo-list"
+    },
+
     
   ];
   

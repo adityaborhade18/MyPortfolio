@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
+
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -14,12 +14,6 @@ const Home = () => {
     setDarkMode(!darkMode);
   };
 
-  const socialLinks = [
-    { icon: <FiGithub />, url: '#', color: 'hover:text-gray-400' },
-    { icon: <FiLinkedin />, url: '#', color: 'hover:text-blue-500' },
-    { icon: <FiTwitter />, url: '#', color: 'hover:text-cyan-400' },
-    { icon: <FiMail />, url: '#', color: 'hover:text-red-400' },
-  ];
 
   return (
     <div className={`min-h-screen flex items-center justify-center px-4 sm:px-6 transition-colors duration-500 ${
@@ -102,26 +96,13 @@ const Home = () => {
             transition={{ delay: 1, duration: 0.8 }}
             className="flex items-center space-x-6"
           >
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.url}
-                  className={`text-2xl ${darkMode ? 'text-gray-500 hover:text-indigo-400' : 'text-gray-400 hover:text-indigo-500'} transition-colors`}
-                  whileHover={{ y: -5 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
-            </div>
-            <div className={`h-px flex-1 ${darkMode ? 'bg-gray-800' : 'bg-gray-300'}`}></div>
-            <div className={`text-sm ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>Based in India</div>
+           
+           
           </motion.div>
         </motion.div>
         
         {/* Profile image */}
-        <motion.div 
+        {/* <motion.div 
           className="flex justify-center lg:justify-end"
           initial={{ opacity: 0, x: 50 }}
           animate={isMounted ? { opacity: 1, x: 0 } : {}}
@@ -151,30 +132,65 @@ const Home = () => {
                 darkMode ? 'bg-blue-500/20' : 'bg-blue-400/20'
               } backdrop-blur-lg`}
             />
-            
-            <div className="absolute -bottom-6 -right-6 z-20">
-              <motion.div 
-                className={`p-4 rounded-xl ${
-                  darkMode 
-                    ? 'bg-gray-800/80 backdrop-blur-md' 
-                    : 'bg-white/80 backdrop-blur-md'
-                } shadow-lg`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isMounted ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 1.2, duration: 0.5 }}
-              >
-                <div className="flex items-center">
-                  <div className={`w-3 h-3 rounded-full mr-2 ${
-                    darkMode ? 'bg-green-400' : 'bg-green-500'
-                  }`}></div>
-                  <span className={darkMode ? 'text-green-400' : 'text-green-600'}>
-                    Available for work
-                  </span>
-                </div>
-              </motion.div>
             </div>
+        </motion.div> */}
+
+        <motion.div 
+          className="flex justify-center lg:justify-end"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isMounted ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="relative">
+            <div className={`w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 ${
+              darkMode ? 'border-indigo-500/30' : 'border-indigo-400/30'
+            } relative z-10`}>
+              {/* Replace this with your actual image */}
+              <div className={`${
+                darkMode 
+                  ? 'bg-gradient-to-br from-gray-800 to-gray-900' 
+                  : 'bg-gradient-to-br from-gray-200 to-gray-300'
+              } w-full h-full flex items-center justify-center overflow-hidden`}>
+                <img 
+                  src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            <motion.div 
+              className={`absolute -top-6 -right-6 w-32 h-32 rounded-full ${
+                darkMode ? 'bg-indigo-500/20' : 'bg-indigo-400/20'
+              } backdrop-blur-lg`}
+              animate={{ 
+                scale: [1, 1.1, 1],
+              }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+              }}
+            />
+            
+            <motion.div 
+              className={`absolute -bottom-8 -left-8 w-40 h-40 rounded-full ${
+                darkMode ? 'bg-blue-500/20' : 'bg-blue-400/20'
+              } backdrop-blur-lg`}
+              animate={{ 
+                scale: [1, 1.05, 1],
+              }}
+              transition={{ 
+                duration: 5,
+                repeat: Infinity,
+                delay: 0.5
+              }}
+            />
+            
           </div>
         </motion.div>
+
+ 
+
       </div>
       
       {/* Dark mode toggle */}
@@ -198,3 +214,14 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
+
+
+
+
+
+      
+    

@@ -84,17 +84,7 @@ class Particle {
 }
 
 const About = () => {
-  // Skills data
-  const skills = [
-    { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" /> },
-    { name: 'React', icon: <FaReact className="text-blue-400" /> },
-    { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
-    { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-cyan-500" /> },
-    { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },
-    { name: 'MongoDB', icon: <SiMongodb className="text-green-400" /> },
-    { name: 'Python', icon: <FaPython className="text-blue-500" /> },
-    { name: 'Figma', icon: <FaFigma className="text-purple-500" /> },
-  ];
+  
 
   const socialLinks = [
     { icon: <FiGithub />, url: '#', label: 'GitHub' },
@@ -411,171 +401,127 @@ const About = () => {
           {/* Content Section with 3D tilt effect */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Profile Image and Info */}
-            <motion.div 
-              className="flex flex-col items-center lg:items-start"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.9, duration: 0.8, type: "spring" }}
-              whileHover={{ 
-                y: -10,
-                transition: { duration: 0.3 }
-              }}
-            >
-              <div className="relative mb-8">
-                {/* Animated profile container */}
-                <motion.div 
-                  className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-indigo-500/30 relative z-10"
-                  animate={{ 
-                    rotate: [0, 1, -1, 0],
-                    scale: [1, 1.01, 1]
-                  }}
-                  transition={{ 
-                    duration: 8,
-                    repeat: Infinity
-                  }}
-                  whileHover={{ 
-                    scale: 1.03,
-                    rotate: 2,
-                    transition: { duration: 0.3 }
-                  }}
-                >
-                  <div className="bg-gradient-to-br from-gray-800 to-gray-900 w-full h-full flex items-center justify-center">
-                    <div className="bg-gray-700 border-2 border-gray-600 rounded-full w-48 h-48 md:w-56 md:h-56" />
-                  </div>
-                </motion.div>
-                
-                {/* Floating shapes with enhanced animations */}
-                <motion.div 
-                  className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-indigo-500/20 backdrop-blur-lg"
-                  animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 10, 0],
-                  }}
-                  transition={{ 
-                    duration: 5,
-                    repeat: Infinity,
-                  }}
-                />
-                
-                <motion.div 
-                  className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full bg-blue-500/20 backdrop-blur-lg"
-                  animate={{ 
-                    scale: [1, 1.05, 1],
-                    rotate: [0, -15, 0],
-                  }}
-                  transition={{ 
-                    duration: 6,
-                    repeat: Infinity,
-                    delay: 0.5
-                  }}
-                />
-                
-                {/* Availability badge with pulse animation */}
-                <motion.div 
-                  className="absolute -bottom-6 -right-6 z-20"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.2, duration: 0.5 }}
-                >
-                  <div className="bg-gray-800/80 backdrop-blur-md p-4 rounded-xl shadow-lg">
-                    <div className="flex items-center">
-                      <motion.div 
-                        className="w-3 h-3 rounded-full mr-2 bg-green-400"
-                        animate={{ 
-                          scale: [1, 1.2, 1],
-                          opacity: [1, 0.7, 1]
-                        }}
-                        transition={{ 
-                          duration: 2, 
-                          repeat: Infinity,
-                          ease: "easeInOut"
-                        }}
-                      />
-                      <span className="text-green-400">Available for work</span>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-              
-              <div className="text-center lg:text-left">
-                <motion.h2 
-                  className="text-3xl font-bold text-white mb-2"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.0, duration: 0.6 }}
-                >
-                  Aditya Borhade
-                </motion.h2>
-                
-                <motion.p 
-                  className="text-xl text-indigo-400 mb-6"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.1, duration: 0.6 }}
-                >
-                  Full-Stack Developer
-                </motion.p>
-                
-                {/* <motion.div 
-                  className="flex justify-center lg:justify-start space-x-4 mb-8"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2, staggerChildren: 0.1 }}
-                >
-                  {socialLinks.map((link, index) => (
-                    <motion.a
-                      key={index}
-                      href={link.url}
-                      className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center shadow-md hover:bg-indigo-500/20 transition-colors"
-                      whileHover={{ 
-                        y: -5,
-                        scale: 1.1,
-                        boxShadow: "0 10px 20px -5px rgba(99, 102, 241, 0.3)"
-                      }}
-                      whileTap={{ scale: 0.9 }}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1.3 + index * 0.1 }}
-                    >
-                      {link.icon}
-                    </motion.a>
-                  ))}
-                </motion.div> */}
-                
-                <motion.div 
-                  className="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 shadow-lg max-w-md border border-gray-700"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.5, duration: 0.6 }}
-                  whileHover={{ 
-                    y: -5,
-                    transition: { duration: 0.3 }
-                  }}
-                >
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center mr-3">
-                        <FiGlobe className="text-indigo-400" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-400">Location</p>
-                        <p className="font-medium text-white">India</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center mr-3">
-                        <FiCode className="text-indigo-400" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-400">Experience</p>
-                        <p className="font-medium text-white">1+ Years</p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
+           <motion.div 
+  className="flex flex-col items-center lg:items-start"
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ delay: 0.9, duration: 0.8, type: "spring" }}
+  whileHover={{ 
+    y: -10,
+    transition: { duration: 0.3 }
+  }}
+>
+  <div className="relative mb-8">
+    {/* Animated profile container */}
+    <motion.div 
+      className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-indigo-500/30 relative z-10"
+      animate={{ 
+        rotate: [0, 1, -1, 0],
+        scale: [1, 1.01, 1]
+      }}
+      transition={{ 
+        duration: 8,
+        repeat: Infinity
+      }}
+      whileHover={{ 
+        scale: 1.03,
+        rotate: 2,
+        transition: { duration: 0.3 }
+      }}
+    >
+      {/* Image container */}
+      <div className="w-full h-full flex items-center justify-center overflow-hidden">
+        {/* Replace the src with your actual image path */}
+        <img 
+          src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+          alt="Aditya Borhade"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </motion.div>
+    
+    {/* Floating shapes with enhanced animations */}
+    <motion.div 
+      className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-indigo-500/20 backdrop-blur-lg"
+      animate={{ 
+        scale: [1, 1.1, 1],
+        rotate: [0, 10, 0],
+      }}
+      transition={{ 
+        duration: 5,
+        repeat: Infinity,
+      }}
+    />
+    
+    <motion.div 
+      className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full bg-blue-500/20 backdrop-blur-lg"
+      animate={{ 
+        scale: [1, 1.05, 1],
+        rotate: [0, -15, 0],
+      }}
+      transition={{ 
+        duration: 6,
+        repeat: Infinity,
+        delay: 0.5
+      }}
+    />
+  </div>
+  
+  {/* Rest of your code remains unchanged */}
+  <div className="text-center lg:text-left">
+    <motion.h2 
+      className="text-3xl font-bold text-white mb-2"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.0, duration: 0.6 }}
+    >
+      Aditya Borhade
+    </motion.h2>
+    
+    <motion.p 
+      className="text-xl text-indigo-400 mb-6"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.1, duration: 0.6 }}
+    >
+      Full-Stack Developer
+    </motion.p>
+    
+    
+    <motion.div 
+      className="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 shadow-lg max-w-md border border-gray-700"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.5, duration: 0.6 }}
+      whileHover={{ 
+        y: -5,
+        transition: { duration: 0.3 }
+      }}
+    >
+      <div className="grid grid-cols-2 gap-4">
+        <div className="flex items-center">
+          <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center mr-3">
+            <FiGlobe className="text-indigo-400" />
+          </div>
+          <div>
+            <p className="text-sm text-gray-400">Location</p>
+            <p className="font-medium text-white">India</p>
+          </div>
+        </div>
+        
+        <div className="flex items-center">
+          <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center mr-3">
+            <FiCode className="text-indigo-400" />
+          </div>
+          <div>
+            <p className="text-sm text-gray-400">Experience</p>
+            <p className="font-medium text-white">1+ Years</p>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</motion.div>
             
             {/* Bio Content with staggered text reveal */}
             <motion.div 
@@ -605,9 +551,9 @@ const About = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 2.2 }}
                   >
-                    I'm a passionate full stack developer with 1+ years of experience creating 
-                    engaging digital experiences. My mission is to transform complex problems 
-                    into intuitive, beautiful solutions.
+                   I'm a passionate full-stack developer with over a year of hands-on experience building modern, 
+                   scalable, and user-centric web applications. My goal is simple—craft digital solutions
+                    that are not only functional but intuitive and visually engaging.
                   </motion.p>
                   
                   <motion.p 
@@ -615,9 +561,9 @@ const About = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 2.4 }}
                   >
-                    With a background in both design and development, I bridge the gap between 
-                    aesthetics and functionality. Every pixel I place and every line of code I 
-                    write is crafted with purpose and precision.
+                    With a solid foundation in both frontend and backend technologies,
+                     I love bridging the gap between design and logic. Whether it's aligning
+                      every pixel perfectly or optimizing database queries, I code with intention and precision.
                   </motion.p>
                   
                   <motion.p 
@@ -625,9 +571,12 @@ const About = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 2.6 }}
                   >
-                    My journey in tech started when I built my first website at 16. Since then, 
-                    I've been obsessed with creating digital experiences that make people's lives 
-                    better and more enjoyable.
+                    My journey into tech began at the age of 18, when I first started learning 
+                    frontend development out of pure curiosity. What began as exploring HTML, CSS, 
+                    and JavaScript quickly grew into a deep interest in how the web works. 
+                    That initial spark pushed me to dive deeper into full-stack development.
+                    
+
                   </motion.p>
                   
                   <motion.p 
@@ -641,52 +590,8 @@ const About = () => {
                   </motion.p>
                 </motion.div>
                 
-                {/* Skills Section with grid stagger */}
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 3.0 }}
-                >
-                  <h3 className="text-xl font-semibold text-white mb-6">
-                    My <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">Skills</span>
-                  </h3>
-                  
-                  <motion.div 
-                    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 3.2 }}
-                  >
-                    {skills.map((skill, index) => (
-                      <motion.div
-                        key={index}
-                        className="flex items-center bg-gray-700/50 p-3 rounded-lg shadow-md overflow-hidden border border-gray-600"
-                        initial={{ opacity: 0, y: 20, scale: 0.8 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{ 
-                          delay: 3.4 + index * 0.1, 
-                          duration: 0.5,
-                          type: "spring",
-                          stiffness: 300
-                        }}
-                        whileHover={{ 
-                          y: -5,
-                          backgroundColor: '#3b82f61a',
-                          borderColor: '#6366f1',
-                          transition: { duration: 0.3 }
-                        }}
-                      
-                      >
-                        <div className="text-2xl mr-3 flex-shrink-0">
-                          {skill.icon}
-                        </div>
-                        <span className="font-medium text-gray-200 text-sm truncate">
-                          {skill.name}
-                        </span>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                </motion.div>
+               
+               
                 
                 {/* Call to Action */}
                 <motion.div 
@@ -696,7 +601,7 @@ const About = () => {
                   transition={{ delay: 4.0 }}
                 >
                   <motion.a
-                    href="#contact"
+                    href="/Contact"
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium rounded-xl shadow-lg relative overflow-hidden"
                     whileHover={{ 
                       scale: 1.05,
@@ -800,136 +705,6 @@ const About = () => {
           
 
         </div>
-      </div>
-
-      {/* Enhanced Chatbot */}
-      <div className="fixed bottom-6 right-6 z-40">
-        <AnimatePresence>
-          {isChatOpen ? (
-            <motion.div 
-              className="w-full max-w-md bg-gray-800 rounded-2xl shadow-xl flex flex-col border border-gray-700 overflow-hidden"
-              initial={{ opacity: 0, scale: 0.8, y: 50 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 50 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              {/* Chat header */}
-              <div className="p-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white flex justify-between items-center">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mr-3">
-                    <FiMessageSquare />
-                  </div>
-                  <h3 className="font-bold">Ask about my journey</h3>
-                </div>
-                <button 
-                  onClick={() => setIsChatOpen(false)}
-                  className="p-1 rounded-full hover:bg-white/20 transition-colors"
-                >
-                  <FiX className="text-xl" />
-                </button>
-              </div>
-              
-              {/* Chat messages */}
-              <div className="flex-1 p-4 overflow-y-auto max-h-[60vh]">
-                {messages.length === 0 ? (
-                  <div className="text-center py-8 text-gray-400">
-                    <p>Ask me anything about Aditya's journey!</p>
-                    <div className="mt-4 grid grid-cols-2 gap-2">
-                      {predefinedQuestions.slice(0, 4).map((qa, index) => (
-                        <motion.button
-                          key={index}
-                          onClick={() => handleQuickQuestion(qa.question)}
-                          className="text-xs bg-gray-700 hover:bg-gray-600 p-2 rounded-lg transition-colors"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          {qa.question}
-                        </motion.button>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="space-y-4">
-                    {messages.map((msg, index) => (
-                      <motion.div
-                        key={index}
-                        className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                      >
-                        <div 
-                          className={`max-w-xs p-3 rounded-2xl ${
-                            msg.sender === 'user' 
-                              ? 'bg-blue-500 text-white rounded-br-none' 
-                              : 'bg-gray-700 rounded-bl-none'
-                          }`}
-                        >
-                          {msg.text}
-                        </div>
-                      </motion.div>
-                    ))}
-                    {isTyping && (
-                      <motion.div 
-                        className="flex justify-start"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                      >
-                        <div className="bg-gray-700 rounded-2xl rounded-bl-none p-3 flex space-x-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
-                        </div>
-                      </motion.div>
-                    )}
-                    <div ref={chatEndRef} />
-                  </div>
-                )}
-              </div>
-              
-              {/* Chat input */}
-              <div className="p-4 border-t border-gray-700">
-                <div className="flex">
-                  <input
-                    type="text"
-                    value={userInput}
-                    onChange={(e) => setUserInput(e.target.value)}
-                    onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                    placeholder="Ask about my journey..."
-                    className="flex-1 bg-gray-700 rounded-l-lg py-2 px-4 focus:outline-none text-white"
-                  />
-                  <motion.button
-                    onClick={handleSendMessage}
-                    className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-r-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FiSend />
-                  </motion.button>
-                </div>
-              </div>
-            </motion.div>
-          ) : (
-            <motion.button
-              onClick={() => setIsChatOpen(true)}
-              className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 shadow-lg flex items-center justify-center"
-              whileHover={{ scale: 1.1, rotate: 10 }}
-              whileTap={{ scale: 0.95 }}
-              animate={{ 
-                boxShadow: ["0 0 0 0 rgba(99, 102, 241, 0.7)", "0 0 0 10px rgba(99, 102, 241, 0)"],
-              }}
-              transition={{ 
-                boxShadow: {
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "loop"
-                }
-              }}
-            >
-              <FiMessageSquare className="text-white text-2xl" />
-            </motion.button>
-          )}
-        </AnimatePresence>
       </div>
     </div>
   );

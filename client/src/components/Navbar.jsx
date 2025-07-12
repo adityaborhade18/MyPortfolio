@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const socialIcons = [
     { icon: <FiGithub />, url: 'https://github.com/adityaborhade18' },
-    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/aditya-borhade-9489712a4' },
+    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/adityaborhade-9489712a4/' },
     { icon: <FiTwitter />, url: 'https://x.com/1828Aditya' },
   ];
 
@@ -82,14 +82,7 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-            
-            {/* Hire Me Button */}
-            <Link
-              to="/contact"
-              className="ml-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2.5 rounded-lg font-medium hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/30"
-            >
-              Hire Me
-            </Link>
+          
           </div>
 
           {/* Mobile Menu Button */}
@@ -148,14 +141,7 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          
-          <Link
-            to="/contact"
-            className="mt-10 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-medium text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300"
-            onClick={() => setIsOpen(false)}
-          >
-            Hire Me
-          </Link>
+    
         </div>
       </div>
     </nav>
