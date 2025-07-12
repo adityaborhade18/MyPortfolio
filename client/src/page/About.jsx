@@ -600,25 +600,6 @@ const About = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 4.0 }}
                 >
-                  <motion.a
-                    href="/Contact"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium rounded-xl shadow-lg relative overflow-hidden"
-                    whileHover={{ 
-                      scale: 1.05,
-                      boxShadow: '0 10px 25px -10px rgba(99, 102, 241, 0.5)'
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <motion.span 
-                      className="absolute inset-0 bg-white opacity-0"
-                      whileHover={{ 
-                        opacity: 0.2,
-                        transition: { duration: 0.3 }
-                      }}
-                    />
-                    <FiMail className="mr-2" />
-                    Let's Connect
-                  </motion.a>
                 </motion.div>
               </div>
             </motion.div>

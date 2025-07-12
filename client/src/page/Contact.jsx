@@ -67,7 +67,7 @@ const Contact = () => {
   try {
     setIsSubmitting(true);
 
-    const { data } = await axios.post('http://localhost:4000/api/email', {
+    const { data } = await axios.post('https://myportfolio-backend-peox.onrender.com/api/email', {
       name,
       email,
       phone,
@@ -352,7 +352,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div 
-          className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 ml-[10rem] mr-[10rem]"
+          className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 mx-4 sm:mx-6 md:mx-20 lg:mx-40"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -373,7 +373,7 @@ const Contact = () => {
             <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
               <FaPhone className="text-white text-xl" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+            <h3 className="text-xl font-bold text-white mb-2">phone</h3>
             <p className="text-gray-300">+1 (123) 456-7890</p>
           </div>
           

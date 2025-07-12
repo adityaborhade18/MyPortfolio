@@ -98,52 +98,59 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu with Animation */}
-      <div
-        className={`md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-xl z-40 transition-all duration-500 ease-in-out ${
-          isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
-        }`}
-      >
-        <div className="flex flex-col h-full justify-center items-center relative">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-6 right-6 text-white p-2 hover:bg-gray-800 rounded-full transition-colors"
-          >
-            <FiX className="h-6 w-6" />
-          </button>
-          
-          <div className="flex flex-col items-center space-y-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.to}
-                className={`text-2xl font-medium px-4 py-2 transition-all duration-300 ${
-                  location.pathname === item.to
-                    ? 'text-indigo-400'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-          
-          <div className="mt-12 flex space-x-6">
-            {socialIcons.map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-indigo-400 transition-colors duration-300 text-2xl p-2"
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
-    
-        </div>
-      </div>
+     
+        
+        <div
+  className={`md:hidden fixed inset-0 bg-gray-950/90 backdrop-blur-md z-40 transition-all duration-500 ease-in-out ${
+    isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+  }`}
+>
+  <div className="flex flex-col h-full justify-between items-center relative px-6 py-10">
+    <button
+      onClick={() => setIsOpen(false)}
+      className="absolute top-5 right-5 text-white p-2 hover:bg-gray-800 rounded-full transition"
+      aria-label="Close menu"
+    >
+      <FiX className="h-6 w-6" />
+    </button>
+
+    <div className="flex flex-col items-center space-y-6 mt-16">
+      {navItems.map((item) => (
+        <Link
+          key={item.name}
+          to={item.to}
+          className={`text-xl font-semibold transition duration-300 ${
+            location.pathname === item.to
+              ? 'text-indigo-400'
+              : 'text-gray-300 hover:text-white'
+          }`}
+          onClick={() => setIsOpen(false)}
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+
+    <div className="flex space-x-6 mb-8">
+      {socialIcons.map((social, index) => (
+        <a
+          key={index}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-indigo-400 transition-colors text-2xl p-2"
+        >
+          {social.icon}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+
+
+
     </nav>
   );
 };

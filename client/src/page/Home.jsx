@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import image from '../assets/react.svg'
 
 
 const Home = () => {
@@ -101,40 +102,8 @@ const Home = () => {
           </motion.div>
         </motion.div>
         
-        {/* Profile image */}
-        {/* <motion.div 
-          className="flex justify-center lg:justify-end"
-          initial={{ opacity: 0, x: 50 }}
-          animate={isMounted ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="relative">
-            <div className={`w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 ${
-              darkMode ? 'border-indigo-500/30' : 'border-indigo-400/30'
-            } relative z-10`}>
-              <div className={`${
-                darkMode 
-                  ? 'bg-gradient-to-br from-gray-800 to-gray-900' 
-                  : 'bg-gradient-to-br from-gray-200 to-gray-300'
-              } w-full h-full flex items-center justify-center`}>
-                <div className="bg-gray-400 border-2 border-dashed rounded-full w-48 h-48 md:w-56 md:h-56" />
-              </div>
-            </div>
-            
-            <div 
-              className={`absolute -top-6 -right-6 w-32 h-32 rounded-full ${
-                darkMode ? 'bg-indigo-500/20' : 'bg-indigo-400/20'
-              } backdrop-blur-lg`}
-            />
-            
-            <div 
-              className={`absolute -bottom-8 -left-8 w-40 h-40 rounded-full ${
-                darkMode ? 'bg-blue-500/20' : 'bg-blue-400/20'
-              } backdrop-blur-lg`}
-            />
-            </div>
-        </motion.div> */}
-
+       
+       {/* profile image */}
         <motion.div 
           className="flex justify-center lg:justify-end"
           initial={{ opacity: 0, x: 50 }}
@@ -152,7 +121,7 @@ const Home = () => {
                   : 'bg-gradient-to-br from-gray-200 to-gray-300'
               } w-full h-full flex items-center justify-center overflow-hidden`}>
                 <img 
-                  src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                  src={image} 
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

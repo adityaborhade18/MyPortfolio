@@ -85,9 +85,8 @@ const Skills = () => {
     },
     hover: { 
       y: -10,
-      scale: 1.05,
-      backgroundColor: 'rgba(59, 130, 246, 0.3)',
-      borderColor: '#3b82f6',
+      scale: 1.03,
+     
       boxShadow: '0 15px 30px -10px rgba(59, 130, 246, 0.5)',
       transition: { duration: 0.3 },
     },
@@ -95,10 +94,8 @@ const Skills = () => {
 
   const dsaCardVariants = {
     hover: { 
-      scale: 1.08,
-      backgroundColor: 'rgba(6, 182, 212, 0.3)',
-      color: '#ffffff',
-      borderColor: '#06b6d4',
+      scale:1.02,
+      
       boxShadow: '0 0 20px rgba(6, 182, 212, 0.7)',
       zIndex: 10,
     }
@@ -251,7 +248,7 @@ const Skills = () => {
                   key={index}
                   variants={skillCardVariants}
                   whileHover="hover"
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-105"
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-100"
                 >
                   <div className="text-3xl mb-2">
                     {skill.icon}
@@ -282,7 +279,7 @@ const Skills = () => {
                   key={index}
                   variants={skillCardVariants}
                   whileHover="hover"
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-105"
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-100"
                 >
                   <div className="text-3xl mb-2">
                     {skill.icon}
@@ -313,7 +310,7 @@ const Skills = () => {
                   key={index}
                   variants={skillCardVariants}
                   whileHover="hover"
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-105"
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center cursor-default border border-gray-600 hover:border-blue-500 hover:text-blue-400 hover:scale-100"
                 >
                   <div className="text-3xl mb-2">
                     {skill.icon}
@@ -383,7 +380,7 @@ const Skills = () => {
               {dsaTopics.map((topic, i) => (
                 <motion.div
                   key={i}
-                  className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-lg text-center text-sm font-medium border border-gray-700 shadow-sm text-gray-300 hover:border-blue-500 hover:text-blue-400 hover:scale-105"
+                  className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-lg text-center text-sm font-medium border border-gray-700 shadow-sm text-gray-300 hover:border-blue-500 hover:text-blue-400 hover:scale-100"
                   whileHover={dsaCardVariants.hover}
                   whileTap={{ scale: 0.95 }}
                 >

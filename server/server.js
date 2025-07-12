@@ -6,7 +6,7 @@ import cors from 'cors';
 
 
 const app = express();
-const allowwedOrigins=['http://localhost:5173','https://myportfolio-backend-peox.onrender.com/']
+const allowwedOrigins=['http://localhost:5173','https://my-portfolio-jet-beta-94.vercel.app/']
 
 // Load environment variables
 dotenv.config();
