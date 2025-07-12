@@ -6,7 +6,7 @@ import cors from 'cors';
 
 
 const app = express();
-const allowwedOrigins=['http://localhost:5173']
+const allowwedOrigins=['http://localhost:5173','https://myportfolio-backend-peox.onrender.com/']
 
 // Load environment variables
 dotenv.config();
@@ -16,9 +16,9 @@ app.use(express.json());
 app.use(cors({origin:allowwedOrigins,credentials:true}));
 
 // Route
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+app.get("/",(req,res)=>{
+    res.send("api is working ");
+})
 
 // API routes
 app.use('/api', userRouter);
