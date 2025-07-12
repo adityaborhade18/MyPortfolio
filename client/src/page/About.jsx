@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiGlobe, FiCode, FiMessageSquare, FiX, FiSend } from 'react-icons/fi';
-import { FaReact, FaNodeJs, FaPython, FaFigma } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb } from 'react-icons/si';
+import image from '../assets/aditya.jpg'
 
 // Particle class for the interactive background
 class Particle {
@@ -433,7 +432,7 @@ const About = () => {
       <div className="w-full h-full flex items-center justify-center overflow-hidden">
         {/* Replace the src with your actual image path */}
         <img 
-          src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+          src={image} 
           alt="Aditya Borhade"
           className="w-full h-full object-cover"
         />

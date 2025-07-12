@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import image from '../assets/react.svg'
+import image from '../assets/aditya.jpg'
 
 
 const Home = () => {
