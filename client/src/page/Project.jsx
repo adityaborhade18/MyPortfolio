@@ -13,7 +13,7 @@ const Project = () => {
       technologies: ["MongoDB", "Express.js", "Node.js", "Tailwind CSS","Session-Auth"],
       category: "fullstack",
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      demoLink: "#",
+      demoLink: "https://airbnb-booking-app-nsxx.onrender.com",
       codeLink: "https://github.com/adityaborhade18/Airbnb-Booking-App"
     },
     {
