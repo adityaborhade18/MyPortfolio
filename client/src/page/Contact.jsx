@@ -374,7 +374,7 @@ const Contact = () => {
               <FaPhone className="text-white text-xl" />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">phone</h3>
-            <p className="text-gray-300">+1 (123) 456-7890</p>
+            <p className="text-gray-300">+91 9325964430</p>
           </div>
           
          
