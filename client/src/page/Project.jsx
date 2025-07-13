@@ -26,16 +26,6 @@ const Project = () => {
       demoLink: "https://grocery-delivery-app-smoky.vercel.app/",
       codeLink: "https://github.com/adityaborhade18/grocery-delivery-app"
     },
-    {
-      id: 3,
-      title: "TodoNest",
-      description: "A sleek and responsive To-Do List application built with React and styled using Tailwind CSS.",
-      technologies: ["React", "Tailwind CSS"],
-      category: "react",
-      image: "https://media.istockphoto.com/id/1092571024/photo/to-do-list-in-notebook-with-calendar.webp?a=1&b=1&s=612x612&w=0&k=20&c=rAN0y61peU5eAvPOCByBG1moG_4GFFPMUXbEnMei8Ok=",
-      demoLink: "https://grocery-delivery-app-smoky.vercel.app/",
-      codeLink: "https://github.com/adityaborhade18/todo-list"
-    },
 
     
   ];
