@@ -31,7 +31,7 @@ const Footer = () => {
             <a href="https://github.com/adityaborhade18" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/aditya-borhade-9489712a4/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
+            <a href="https://www.linkedin.com/in/adityaborhade18/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">
               <FaLinkedin />
             </a>
             <a href="https://x.com/1828Aditya" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl">

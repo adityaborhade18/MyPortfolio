@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const socialIcons = [
     { icon: <FiGithub />, url: 'https://github.com/adityaborhade18' },
-    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/adityaborhade-9489712a4/' },
+    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/adityaborhade18/' },
     { icon: <FiTwitter />, url: 'https://x.com/1828Aditya' },
   ];
 
